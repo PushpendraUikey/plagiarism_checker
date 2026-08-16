@@ -13,13 +13,11 @@ double execute_and_verify_testcase(std::string test_dir) {
 
 //     {   //// -------------------------------------------------modified part
     std::cout << "submission1 tokens: " << std::endl;
-        for(int i=0; i<submission1.size(); i++) std::cout << submission1[i] << ' ';
+    for(int i=0; i<submission1.size(); i++) std::cout << submission1[i] << ' ';
     std::cout << std::endl;
     std::cout << "submission2 tokens: " << std::endl;
     for(int j=0; j<submission2.size(); j++) std::cout << submission2[j] << ' ';
     std::cout << std::endl;
-    return 0;
-    }
 
     std::array<int, 5> output = match_submissions(submission1, submission2);
     std::ifstream in(test_dir + "/expected.txt");
@@ -66,7 +64,5 @@ int main(void) {
     total_score += score1 + score2 + score3;
     std::cout << "Total score: " << total_score << " / 15.0" << std::endl;
 
-// // modified
-//     std::cout << "total score: " << score1 << std:: endl;
     return 0;
 }
